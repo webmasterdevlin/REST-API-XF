@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RestApiApp"
+             x:Class="RestApiApp.MainPage" Padding="20">
+
+<StackLayout>
+    <StackLayout Orientation="Horizontal">
+            <Button Clicked="OnAdd" Text="Add" BackgroundColor="CornflowerBlue" />
+            <Button Clicked="OnUpdate" Text="Update" BackgroundColor="Khaki" HorizontalOptions="CenterAndExpand" />
+            <Button Clicked="OnDelete" Text="Delete" BackgroundColor="Crimson" />
+        </StackLayout>
+    <ListView x:Name="MyListView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Title}" Detail="{Binding Body}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</StackLayout>
+
+</ContentPage>
